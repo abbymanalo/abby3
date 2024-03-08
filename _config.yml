@@ -1,9 +1,9 @@
-title: Teacher 2.0
+title: Abby Blog
 description: "August 2023 to June 2024"
-owner_name: John Mortensen
-github_username: nighthawkcoders
-github_repo: "teacher_portfolio"
-baseurl: "/teacher_portfolio"
+owner_name: Abby Manalo
+github_username: abbymanalo
+github_repo: "abby3"
+baseurl: "/abby3"
 future: true
 remote_theme: jekyll/minima
 minima:
