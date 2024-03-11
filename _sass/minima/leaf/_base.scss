@@ -178,14 +178,14 @@ table {
   overflow: hidden;
   tr {
     &:nth-child(even) {
-      background-color: #3c3c3c;
+      background-color: #bb37cc;
     }
   }
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    background-color: #454545;
+    background-color: #98179c;
   }
 
   @include media-query($on-laptop) {
