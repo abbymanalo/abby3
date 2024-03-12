@@ -151,7 +151,8 @@ let aKeyPressed = false;
         }
       }
     if (event.key === "a") {
-      
+      dKeyPressed = false;
+      akeyPressed = true;
       event.preventDefault()
         if (mario.currentSpeed === 0) {
           mario.startWalkingL();
