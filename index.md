@@ -95,10 +95,19 @@ hide: true
       this.stopAnimate();
       this.animate(this.obj["Walk"], 3);
     }
+    StartWalkingL() {
+      this.stopAnimate();
+      this.animate(this.obj["WalkL"], -3);
+    }
 
     startRunning() {
       this.stopAnimate();
       this.animate(this.obj["Run1"], 6);
+    }
+
+    startRunningL() {
+      this.stopAnimate();
+      this.animate(this.obj["Run1L"], -6);
     }
 
     startPuffing() {
@@ -127,22 +136,30 @@ hide: true
   }
 
   const mario = new Mario(mario_metadata);
+let dKeyPressed = false;
+let aKeyPressed = false;
 
   ////////// event control /////////
 
   window.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowRight") {
+    if (event.key === "d") {
       event.preventDefault();
-      if (event.repeat) {
-        mario.startCheering();
-      } else {
         if (mario.currentSpeed === 0) {
           mario.startWalking();
         } else if (mario.currentSpeed === 3) {
           mario.startRunning();
         }
       }
-    } else if (event.key === "ArrowLeft") {
+    if (event.key === "a") {
+      
+      event.preventDefault()
+        if (mario.currentSpeed === 0) {
+          mario.startWalkingL();
+        } else if (mario.currentSpeed === 3) {
+          mario.startRunningL();
+        }
+      }
+    else if (event.key === "s") {
       event.preventDefault();
       if (event.repeat) {
         mario.stopAnimate();
@@ -183,17 +200,16 @@ hide: true
     // adjust sprite size for high pixel density devices
     const scale = window.devicePixelRatio;
     const sprite = document.querySelector(".sprite");
-    sprite.style.transform = `scale(${0.2 * scale})`;
+    sprite.style.transform = `scale(${0.5 * scale})`;
     mario.startResting();
   });
 
 </script>
-Investing in Your Technical Future
 
-Explore the Computer Science Pathway at Del Norte High School. All Del Norte CompSci classes are designed to provide a real-world development experience. Grading is focused on time invested, analytics, participation with peers, and engagement in learning.
 
-- Project-based learning with teacher support
-- Tech Talks by teacher complimented with Student Teaching
-- Course learning includes Coding Languages, DevOps, GitHub, Research and Creativity
-- Student teams practice Agile Development Methodologies: planning, communication, collaboration
-- Class lab time provided and approximately 2-3 hours of homework per week
+
+
+
+
+
+
