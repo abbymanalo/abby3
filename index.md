@@ -16,6 +16,11 @@ hide: true
 <!--- Size width/height of Sprit images --->
 {% assign pixels = 256 %} 
 
+**Issues with Mario**
+- Can only go left when already walking right
+- only can run left, not walk
+- "w key" to cheer stopped working
+- Mario is shifted too low (uncentered)
 <!--- HTML for page contains <p> tag named "Mario" and class properties for a "sprite"  -->
 
 <p id="mario" class="sprite"></p>
