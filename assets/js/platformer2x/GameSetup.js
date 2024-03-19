@@ -170,11 +170,13 @@ const GameSetup = {
       obstacles: {
         tube: { src: "/images/platformer/obstacles/tube.png" },
         coin: { src: "/images/platformer/obstacles/coin.png"},
-        tree: { src: "/images/platformer/obstacles/tree.png"}
+        tree: { src: "/images/platformer/obstacles/tree.png"},
+        sandcastle: {src: "/images/platformer/Beachgamelvl/sandcastle.png"}
       },
       platforms: {
         grass: { src: "/images/platformer/platforms/grass.png" },
         alien: { src: "/images/platformer/platforms/alien.png" },
+        sand: { src: "/images/platformer/Beachgamelvl/sand.jpg" },
         bricks: { src: "/images/platformer/platforms/brick_wall.png" },
         block: { src: "/images/platformer/platforms/brick_block.png" }, //MAY need 3 new variables: sizeRatio, widthRatio, and heightRatio
         itemBlock: {
@@ -199,6 +201,7 @@ const GameSetup = {
         loading: { src: "/images/platformer/backgrounds/greenscreen.png" },
         complete: { src: "/images/platformer/backgrounds/OneStar.png" },
         complete2: { src: "/images/platformer/backgrounds/TwoStar.png" },
+        beach: { src: "/images/platformer/Beachgamelvl/beach.jpg" },
         end: { src: "/images/platformer/backgrounds/Congratulations!!!.png" }
       },
       players: {
@@ -254,11 +257,26 @@ const GameSetup = {
           speedRatio: 0.7,
           xPercentage: 0.6,
         },
+        crab: {
+          src: "/images/platformer/Beachgamelvl/crab.png",
+          width: 500,
+          height: 500,
+          scaleSize: 90,
+          speedRatio: 0.7,
+          xPercentage: 0.6,
+        },
         flyingGoomba: {
           src: "/images/platformer/sprites/flying-goomba.png",
           width: 448,
           height: 452,
           scaleSize: 60,
+          speedRatio: 0.7,
+        },
+        flyingSeagull: {
+          src: "/images/platformer/Beachgamelvl/seagull.png",
+          width: 494,
+          height: 505,
+          scaleSize: 90,
           speedRatio: 0.7,
         },
         mushroom: {
@@ -417,6 +435,33 @@ const GameSetup = {
         // Space Game Level added to the GameEnv ...
         new GameLevel( {tag: "space", callback: this.playerOffScreenCallBack, objects: spaceGameObjects} );
 
+        // New Level Definition // 
+        const beachGameObjects = [
+        // const beachGameObjects = [
+          // GameObject(s), the order is important to z-index...
+          { name: 'beach', id: 'background', class: Background, data: this.assets.backgrounds.beach },
+          { name: 'sand', id: 'platform', class: Platform, data: this.assets.platforms.sand },
+          { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.alien, xPercentage: 0.2, yPercentage: 0.85 },
+          { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.alien, xPercentage: 0.2368, yPercentage: 0.85 },
+          { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.alien, xPercentage: 0.5, yPercentage: 0.85 },
+          { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.alien, xPercentage: 0.5368, yPercentage: 0.85 },
+          { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.alien, xPercentage: 0.4, yPercentage: 1 },
+          { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.alien, xPercentage: 0.4, yPercentage: 0.9 },
+          { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.alien, xPercentage: 0.4, yPercentage: 0.8 },
+          { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.alien, xPercentage: 0.4, yPercentage: 0.7 },
+          { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.alien, xPercentage: 0.4, yPercentage: 0.6 },
+          { name: 'crab', id: 'crab', class: Goomba, data: this.assets.enemies.crab, xPercentage: 0.3, minPosition: 0.05},
+          { name: 'crab', id: 'crab', class: Goomba, data: this.assets.enemies.crab, xPercentage:  0.5, minPosition: 0.3 },
+          { name: 'crabSpecial', id: 'crab', class: Goomba, data: this.assets.enemies.crab, xPercentage:  0.75, minPosition: 0.5 }, //this special name is used for random event 2 to make sure that only one of the Goombas ends the random event
+          { name: 'flyingSeagull', id: 'flyingSeagull', class: FlyingGoomba, data: this.assets.enemies.flyingSeagull, xPercentage:  0.5, minPosition:  0.05},
+          { name: 'flyingSeagull', id: 'flyingSeagull', class: FlyingGoomba, data: this.assets.enemies.flyingSeagull, xPercentage:  0.9, minPosition: 0.5},
+          { name: 'lopez', id: 'player', class: Player, data: this.assets.players.lopez },
+          { name: 'tree', id: 'tree', class: Tree, data: this.assets.obstacles.tree },
+          { name: 'complete', id: 'background', class: BackgroundTransitions,  data: this.assets.backgrounds.complete },
+        ];
+          
+        // New Level added to the GameEnv ... 
+        new GameLevel( {tag: "beach", callback: this.playerOffScreenCallBack, objects: beachGameObjects} );
         // Game Over Level definition...
         const endGameObjects = [
         { name:'background', class: Background, id: 'background', data: this.assets.backgrounds.end}
