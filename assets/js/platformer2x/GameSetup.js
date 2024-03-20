@@ -176,7 +176,7 @@ const GameSetup = {
       platforms: {
         grass: { src: "/images/platformer/platforms/grass.png" },
         alien: { src: "/images/platformer/platforms/alien.png" },
-        sand: { src: "/images/platformer/Beachgamelvl/sand.jpg" },
+        sandy: { src: "/images/platformer/Beachgamelvl/sandy.jpg" },
         bricks: { src: "/images/platformer/platforms/brick_wall.png" },
         block: { src: "/images/platformer/platforms/brick_block.png" }, //MAY need 3 new variables: sizeRatio, widthRatio, and heightRatio
         itemBlock: {
@@ -201,7 +201,7 @@ const GameSetup = {
         loading: { src: "/images/platformer/backgrounds/greenscreen.png" },
         complete: { src: "/images/platformer/backgrounds/OneStar.png" },
         complete2: { src: "/images/platformer/backgrounds/TwoStar.png" },
-        beach: { src: "/images/platformer/Beachgamelvl/beach.jpg" },
+        ocean: { src: "/images/platformer/Beachgamelvl/ocean.jpg" },
         end: { src: "/images/platformer/backgrounds/Congratulations!!!.png" }
       },
       players: {
@@ -439,8 +439,8 @@ const GameSetup = {
         const beachGameObjects = [
         // const beachGameObjects = [
           // GameObject(s), the order is important to z-index...
-          { name: 'beach', id: 'background', class: Background, data: this.assets.backgrounds.beach },
-          { name: 'sand', id: 'platform', class: Platform, data: this.assets.platforms.sand },
+          { name: 'ocean', id: 'background', class: Background, data: this.assets.backgrounds.ocean },
+          { name: 'sandy', id: 'platform', class: Platform, data: this.assets.platforms.sandy },
           { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.alien, xPercentage: 0.2, yPercentage: 0.85 },
           { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.alien, xPercentage: 0.2368, yPercentage: 0.85 },
           { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.alien, xPercentage: 0.5, yPercentage: 0.85 },
