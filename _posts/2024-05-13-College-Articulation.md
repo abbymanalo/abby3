@@ -112,5 +112,5 @@ This next piece loops the entire game
 ```
 This gets the game level as long as its not transitioning between levels. It also moves to the next level once the current one is complete or starts the entire game from the beginning. 
 # Class Design, Draw.io
-I chose to create my diagram based on our mini level, Hogwarts since that is the level I created on behalf of my team and worked most on. The diagram below demonstrates how each object in the Hogwarts leve exists in the game through the many files under Platformer3x.
+I chose to create my diagram based on our mini level, Hogwarts since that is the level I created on behalf of my team and worked most on. The diagram below demonstrates how each object in the Hogwarts level exists in the game through the many files under Platformer3x.
 ![diagram]({{site.baseurl}}/images/diagram.png)
