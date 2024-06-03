@@ -109,14 +109,19 @@ This next piece loops the entire game
         requestAnimationFrame(this.gameLoop.bind(this));  
     },
 };
-### Inspect
+```
 
+This gets the game level as long as its not transitioning between levels. It also moves to the next level once the current one is complete or starts the entire game from the beginning. 
+
+# Inspect
+Using inspect was a really useful tool in creating this game.
 <img src= "{{site.baseurl}}/images/inspect.png" >
 <img src= "{{site.baseurl}}/images/source.png" >
+The source part of inspect shows the line of code that you're inspecting
 <img src= "{{site.baseurl}}/images/console.png" >
+The console part of inspect shows what's wrong with the page. I used this a lot when I would open the game only for it to not load in. When I checked console, it shows which file is causing the problem, or overall why there's a problem. This screenshot doesn't show the console's full use as there's not really anything that is disrupting the use of the game. 
 
-```
-This gets the game level as long as its not transitioning between levels. It also moves to the next level once the current one is complete or starts the entire game from the beginning. 
 # Class Design, Draw.io
+
 I chose to create my diagram based on our mini level, Hogwarts since that is the level I created on behalf of my team and worked most on. The diagram below demonstrates how each object in the Hogwarts level exists in the game through the many files under Platformer3x.
 ![diagram]({{site.baseurl}}/images/diagram.png)
