@@ -109,6 +109,12 @@ This next piece loops the entire game
         requestAnimationFrame(this.gameLoop.bind(this));  
     },
 };
+### Inspect
+
+<img src= "{{site.baseurl}}/images/inspect.png" >
+<img src= "{{site.baseurl}}/images/source.png" >
+<img src= "{{site.baseurl}}/images/console.png" >
+
 ```
 This gets the game level as long as its not transitioning between levels. It also moves to the next level once the current one is complete or starts the entire game from the beginning. 
 # Class Design, Draw.io
