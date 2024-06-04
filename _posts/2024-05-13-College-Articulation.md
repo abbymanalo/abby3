@@ -25,6 +25,7 @@ At the end of this piece, it adds our objects to the Game Enviornment and create
     // Quidditch Game Level added to the GameEnv ...
     new GameLevel({ tag: "quidditch", callback: this.playerOffScreenCallBack, objects: quidditchGameObjects });
 ```
+## Game Level
 Now in GameLevel.js, this takes the objects from each object listing and creates a level and adds it to the Game Enviornment
 ``` js
 class GameLevel {
@@ -48,7 +49,7 @@ class GameLevel {
         GameEnv.levels.push(this);
     }
 ```
-In GameControl.js, this transitions to the next level after the current level is complete. 
+In GameControl.js, the following lines transitions to the next level after the current level is complete. 
 ``` js
 
     /**
@@ -77,6 +78,7 @@ In GameControl.js, this transitions to the next level after the current level is
         this.inTransition = false;
     },
 ```
+## Loop statements in GameControl.js
 This next piece loops the entire game 
 ``` js
   gameLoop() {
@@ -109,8 +111,8 @@ This next piece loops the entire game
         requestAnimationFrame(this.gameLoop.bind(this));  
     },
 };
-```
 
+```
 This gets the game level as long as its not transitioning between levels. It also moves to the next level once the current one is complete or starts the entire game from the beginning. 
 
 # Inspect
