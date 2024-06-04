@@ -78,7 +78,7 @@ In GameControl.js, the following lines transitions to the next level after the c
         this.inTransition = false;
     },
 ```
-## Loop statements in GameControl.js
+## Loop statements in GameControl.js 
 This next piece loops the entire game 
 ``` js
   gameLoop() {
@@ -125,5 +125,5 @@ The console part of inspect shows what's wrong with the page. I used this a lot 
 
 # Class Design, Draw.io
 
-I chose to create my diagram based on our mini level, Hogwarts since that is the level I created on behalf of my team and worked most on. The diagram below demonstrates how each object in the Hogwarts level exists in the game through the many files under Platformer3x.
+I chose to create my diagram based on our mini level, Hogwarts since that is the level I created on behalf of my team and worked most on. The diagram below demonstrates how each object in the Hogwarts level exists in the game.
 ![diagram]({{site.baseurl}}/images/diagram.png)
